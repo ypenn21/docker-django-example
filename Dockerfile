@@ -1,5 +1,5 @@
 FROM node:20.6.1-bookworm-slim AS assets
-LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
+LABEL maintainer="Yanni Peng"
 
 WORKDIR /app/assets
 
@@ -34,7 +34,7 @@ CMD ["bash"]
 ###############################################################################
 
 FROM python:3.12.4-slim-bookworm AS app
-LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
+LABEL maintainer="Yanni Peng"
 
 WORKDIR /app
 
