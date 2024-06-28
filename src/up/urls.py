@@ -4,7 +4,6 @@ from up import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("databases", views.databases, name="databases"),
     path("status", views.status, name="status"),  # Add this line
 
 ]

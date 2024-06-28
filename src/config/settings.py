@@ -89,16 +89,16 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("POSTGRES_DB", "hello"),
-        "USER": os.getenv("POSTGRES_USER", "hello"),
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD", "password"),
-        "HOST": os.getenv("POSTGRES_HOST", "postgres"),
-        "PORT": os.getenv("POSTGRES_PORT", "5432"),
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": os.getenv("POSTGRES_DB", "hello"),
+#         "USER": os.getenv("POSTGRES_USER", "hello"),
+#         "PASSWORD": os.getenv("POSTGRES_PASSWORD", "password"),
+#         "HOST": os.getenv("POSTGRES_HOST", "postgres"),
+#         "PORT": os.getenv("POSTGRES_PORT", "5432"),
+#     }
+# }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -126,21 +126,21 @@ AUTH_PASSWORD_VALIDATORS = [
 SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
 # Redis
-REDIS_URL = os.getenv("REDIS_URL", "redis://redis:6379/0")
-
-# Caching
-# https://docs.djangoproject.com/en/5.0/topics/cache/
-CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": REDIS_URL,
-    }
-}
+# REDIS_URL = os.getenv("REDIS_URL", "redis://redis:6379/0")
+#
+# # Caching
+# # https://docs.djangoproject.com/en/5.0/topics/cache/
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django.core.cache.backends.redis.RedisCache",
+#         "LOCATION": REDIS_URL,
+#     }
+# }
 
 # Celery
 # https://docs.celeryproject.org/en/stable/userguide/configuration.html
-CELERY_BROKER_URL = REDIS_URL
-CELERY_RESULT_BACKEND = REDIS_URL
+# CELERY_BROKER_URL = REDIS_URL
+# CELERY_RESULT_BACKEND = REDIS_URL
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -152,10 +152,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
-STATIC_URL = "/static/"
-STATICFILES_DIRS = ["/public", os.path.join(BASE_DIR, "..", "public")]
-STATIC_ROOT = "/public_collected"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATIC_URL = "/static/"
+# STATICFILES_DIRS = ["/Users/yannipeng/git-projects/docker-django-example/assets"]
+# print(f"{STATICFILES_DIRS}")
+# STATIC_ROOT = "/Users/yannipeng/git-projects/docker-django-example/public_collected"
+# print(f"{STATIC_ROOT}")
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Django Debug Toolbar
 # https://django-debug-toolbar.readthedocs.io/

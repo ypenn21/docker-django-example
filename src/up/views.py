@@ -5,18 +5,18 @@ from redis import Redis
 from .utils import generate_random_number  # Import from utils.py
 
 
-redis = Redis.from_url(settings.REDIS_URL)
+# redis = Redis.from_url(settings.REDIS_URL)
 
 
 def index(request):
     return HttpResponse("okay")
 
 
-def databases(request):
-    redis.ping()
-    connection.ensure_connection()
-
-    return HttpResponse("")
+# def databases(request):
+#     redis.ping()
+#     connection.ensure_connection()
+#
+#     return HttpResponse("")
 
 
 def status(request):
